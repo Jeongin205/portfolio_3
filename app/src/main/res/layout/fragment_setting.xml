@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment_home"
     android:orientation="vertical">
     <LinearLayout
@@ -20,19 +21,37 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginLeft="20dp"
-            android:layout_gravity="center_vertical">
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp">
             <TextView
+                android:id="@+id/tv_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="유저"
                 android:textSize="22dp"
+                android:fontFamily="@font/font"
                 android:textColor="@color/black"/>
             <TextView
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="이메일"
+                android:fontFamily="@font/font"
                 android:textSize="15dp"/>
         </LinearLayout>
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:text="로그아웃"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:fontFamily="@font/font"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/logout"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,6 +70,7 @@
                 android:gravity="center"
                 android:layout_marginRight="50dp">
                 <TextView
+                    android:id="@+id/total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
@@ -67,9 +87,8 @@
             </LinearLayout>
             <TextView
                 android:layout_width="2dp"
-                android:layout_height="60dp"
-                android:background="@color/black"
-                android:textSize="40dp"/>
+                android:layout_height="55dp"
+                android:background="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -78,6 +97,7 @@
                 android:gravity="center"
                 android:layout_marginLeft="50dp">
                 <TextView
+                    android:id="@+id/week"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2"
@@ -95,42 +115,75 @@
 
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/box"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_userset"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/box">
+        <Button
+            android:id="@+id/btn_userset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ff0000"/>
+        <LinearLayout
             android:layout_marginLeft="15dp"
-            android:text="개인정보 설정"
-            android:textSize="16dp"
-            android:textColor="@color/black"/>
-    </LinearLayout>
-    <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_userset"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="개인정보 설정"
+                android:fontFamily="@font/font"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@drawable/box"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_userset"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:layout_height="70dp"
+        android:background="@drawable/box">
+        <Button
+            android:id="@+id/btn_imgset"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ff0000"/>
+        <LinearLayout
             android:layout_marginLeft="15dp"
-            android:text="사진 설정"
-            android:textSize="16dp"
-            android:textColor="@color/black"/>
-    </LinearLayout>
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_imgset"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="배경 이미지 변경"
+                android:fontFamily="@font/font"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|bottom"
+        android:text="아이콘 제작자 https://www.freepik.com\n폰트 제작 https://fonts.cafe24.com/\n"/>
 </LinearLayout>
