@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginHorizontal="4dp"
+    android:background="@drawable/edit"
+    android:layout_marginBottom="5dp">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/font"/>
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_marginLeft="270dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="날짜"
+        android:textColor="@color/purple_500"
+        android:fontFamily="@font/font"/>
+</LinearLayout>

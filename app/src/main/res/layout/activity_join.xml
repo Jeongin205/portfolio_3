@@ -103,7 +103,7 @@
             android:maxLength="8"
             android:background="@drawable/edit"/>
         <EditText
-            android:id="@+id/et_psw"
+            android:id="@+id/et_pwd"
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:layout_marginTop="5dp"
@@ -117,6 +117,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="30dp">
             <Button
+                android:id="@+id/btn_register"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
