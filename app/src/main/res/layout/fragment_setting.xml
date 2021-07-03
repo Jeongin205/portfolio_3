@@ -8,7 +8,7 @@
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:orientation="horizontal">
         <ImageView
             android:layout_marginTop="20dp"
@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="유저"
-                android:textSize="22dp"
+                android:textSize="25dp"
                 android:fontFamily="@font/font"
                 android:textColor="@color/black"/>
             <TextView
@@ -38,7 +38,7 @@
                 android:layout_marginTop="5dp"
                 android:text="이메일"
                 android:fontFamily="@font/font"
-                android:textSize="15dp"/>
+                android:textSize="17dp"/>
         </LinearLayout>
         <Button
             android:id="@+id/btn_logout"
@@ -46,7 +46,7 @@
             android:layout_height="40dp"
             android:text="로그아웃"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="16dp"
             android:fontFamily="@font/font"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="110dp"
@@ -55,7 +55,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         android:orientation="vertical"
         android:gravity="center"
         android:background="@drawable/box">
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="103dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
@@ -81,6 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="총 일기량"
+                    android:textSize="17sp"
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/font"
                     android:textColor="@color/black"/>
@@ -91,7 +92,7 @@
                 android:background="@color/black"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="103dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
@@ -109,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="일주일 일기량"
+                    android:textSize="17sp"
                     android:fontFamily="@font/font"
                     android:textColor="@color/black"/>
             </LinearLayout>
@@ -117,8 +119,7 @@
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/box">
+        android:layout_height="80dp">
         <Button
             android:id="@+id/btn_userset"
             android:layout_width="match_parent"
@@ -143,17 +144,20 @@
                 android:text="개인정보 설정"
                 android:fontFamily="@font/font"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="18dp"
                 android:gravity="center"/>
         </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1.6dp"
+        android:background="@drawable/box"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/box">
+        android:layout_height="80dp">
         <Button
             android:id="@+id/btn_imgset"
             android:layout_width="match_parent"
@@ -177,13 +181,17 @@
                 android:text="배경 이미지 변경"
                 android:fontFamily="@font/font"
                 android:textColor="@color/black"
-                android:textSize="16dp"
+                android:textSize="18dp"
                 android:gravity="center"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1.6dp"
+        android:background="@drawable/box"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
         android:gravity="center|bottom"
         android:text="아이콘 제작자 https://www.freepik.com\n폰트 제작 https://fonts.cafe24.com/\n"/>
 </LinearLayout>
