@@ -27,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class JoinActivity extends AppCompatActivity {
-
+    Button back;
     private FirebaseAuth mAuth;
     //현재 로그인 된 유저 정보를 담을 변수
     private FirebaseUser currentUser;
@@ -47,8 +47,14 @@ public class JoinActivity extends AppCompatActivity {
         final EditText pwTxt = (EditText)findViewById(R.id.et_pw);
         //버튼
         Button joinBtn = (Button)findViewById(R.id.btn_register);
-
-
+        back = findViewById(R.id.btn_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(JoinActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         //버튼이 눌렀을 때
         joinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,8 +64,6 @@ public class JoinActivity extends AppCompatActivity {
                 String name = nameTxt.getText().toString();
                 String pw = pwTxt.getText().toString();
 
-
-                Toast.makeText(JoinActivity.this,email +"/=가입 버튼 눌리고" + name +"/" + pw,Toast.LENGTH_SHORT).show();
 
 
                 //가입 성공했을 때 -> 감사리스트 메인 페이지로 이동하기
@@ -92,13 +96,13 @@ public class JoinActivity extends AppCompatActivity {
                             } catch(FirebaseAuthUserCollisionException e) {
                                 Toast.makeText(JoinActivity.this,"이미존재하는 email 입니다." ,Toast.LENGTH_SHORT).show();
                             } catch(Exception e) {
-                                Toast.makeText(JoinActivity.this,"다시 확인해주세요.." ,Toast.LENGTH_SHORT).show();
+                                Toast.makeText(JoinActivity.this,"다시 확인해주세요." ,Toast.LENGTH_SHORT).show();
                             }
                         }else{
 
                             currentUser = mAuth.getCurrentUser();
 
-                            Toast.makeText(JoinActivity.this, "가입 성공  " + name + currentUser.getEmail() + "/" + currentUser.getUid() ,Toast.LENGTH_SHORT).show();
+                            Toast.makeText(JoinActivity.this, "가입 성공 ",Toast.LENGTH_SHORT).show();
 
                             startActivity(new Intent(JoinActivity.this, LoginActivity.class));
                             finish();
