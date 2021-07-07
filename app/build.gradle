@@ -43,5 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.navigation:navigation-fragment:2.3.2'
     implementation 'androidx.navigation:navigation-ui:2.3.2'
+    implementation 'com.github.channguyen:rsv:1.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

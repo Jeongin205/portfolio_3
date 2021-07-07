@@ -51,6 +51,7 @@
             android:layout_height="45dp"
             android:hint="  E-mail"
             android:inputType="textEmailAddress"
+            android:paddingStart="5dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/edit"/>
         <EditText
@@ -58,6 +59,7 @@
             android:layout_width="280dp"
             android:layout_height="45dp"
             android:hint="  Password"
+            android:paddingStart="5dp"
             android:inputType="textPassword"
             android:layout_marginTop="10dp"
             android:background="@drawable/edit"/>
