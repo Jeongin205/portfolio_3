@@ -19,13 +19,14 @@ import com.google.firebase.auth.UserInfo;
 import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
 
 public class UsersetActivity extends AppCompatActivity {
-    Button back;
+    Button back, set;
     TextView tv_email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_userset);
         tv_email = findViewById(R.id.tv_Uemail);
+        set = findViewById(R.id.set);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             for (UserInfo profile : user.getProviderData()) {
@@ -37,7 +38,12 @@ public class UsersetActivity extends AppCompatActivity {
         }
 
 
+        set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
         back = findViewById(R.id.Uback);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

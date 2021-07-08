@@ -84,7 +84,7 @@
                 android:id="@+id/bg6"
                 android:layout_width="190dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/moon"
+                android:src="@drawable/bg6"
                 android:background="#00ff0000"
                 android:scaleType="centerCrop"
                 android:layout_marginLeft="3dp"/>

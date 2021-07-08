@@ -18,7 +18,6 @@ public class Fragment_home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
         Button btn_write;
-        FrameLayout home = (FrameLayout) v.findViewById(R.id.background);
         btn_write = v.findViewById(R.id.btn_write);
         btn_write.setOnClickListener(new View.OnClickListener() {
             @Override
