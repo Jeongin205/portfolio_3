@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WriteActivity"
-    android:background="@drawable/night">
+    android:background="@drawable/bg6">
     <Button
         android:id="@+id/btn_wback"
         android:layout_width="70dp"
@@ -53,89 +53,25 @@
             android:textColor="#203347"
             android:layout_marginTop="25dp"/>
         <EditText
+            android:id="@+id/et_diary"
             android:layout_width="320dp"
             android:layout_height="56dp"
             android:layout_marginTop="40dp"
             android:hint="일기 쓰기"
+            android:inputType="text"
+            android:singleLine="true"
             android:textSize="20sp"
             android:fontFamily="@font/font"
             android:paddingStart="10dp"
             android:background="@drawable/edit2"/>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/moodLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="4dp"
-            android:layout_above="@+id/bottomLayout"
-            app:cardBackgroundColor="#FFFFFFFF"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="5dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#ADFFFFFF">
-
-                <com.github.channguyen.rsv.RangeSliderView
-                    android:id="@+id/sliderView"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="20dp"
-                    app:filledColor="#FF6600"
-                    app:emptyColor="#a8aeb8"
-                    app:rangeCount="5"
-                    app:sliderRadiusPercent="0.4"
-                    app:barHeightPercent="0.1"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_angry"/>
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_cry"/>
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_close"/>
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_omg"/>
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="40dp"
-                            android:layout_weight="1"
-                            android:src="@drawable/ic_hap"/>
-
-                    </LinearLayout>
-            </LinearLayout>
         <Button
             android:id="@+id/btn_send"
             android:layout_width="330dp"
-            android:layout_height="70dp"
+            android:layout_height="60dp"
             android:layout_marginTop="50sp"
             android:text="완료하기"
-            android:textSize="30sp"
+            android:textSize="28sp"
             android:fontFamily="@font/font"
             android:textColor="@color/white"
             android:background="@drawable/btn1"/>
