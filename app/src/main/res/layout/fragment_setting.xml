@@ -48,7 +48,7 @@
                     android:id="@+id/total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
+                    android:text="2"
                     android:textSize="40dp"
                     android:fontFamily="@font/font"
                     android:textColor="@color/blue2"/>
@@ -84,7 +84,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="일주일 일기량"
+                    android:text="한달 일기량"
                     android:textSize="17sp"
                     android:fontFamily="@font/font"
                     android:textColor="@color/black"/>
@@ -92,42 +92,6 @@
 
         </LinearLayout>
     </LinearLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-        <Button
-            android:id="@+id/btn_userset"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00ff0000"/>
-        <LinearLayout
-            android:layout_marginLeft="15dp"
-            android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_userset"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:text="개인정보 설정"
-                android:fontFamily="@font/font"
-                android:textColor="@color/black"
-                android:textSize="18dp"
-                android:gravity="center"/>
-        </LinearLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1.6dp"
-        android:background="@drawable/box"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -165,7 +129,7 @@
         android:background="@drawable/box"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="300dp"
         android:gravity="center|bottom"
         android:text="아이콘 제작자 https://www.freepik.com\n폰트 제작 https://fonts.cafe24.com/\n"/>
 </LinearLayout>

@@ -13,16 +13,19 @@ import androidx.fragment.app.Fragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Fragment_setting extends Fragment {
-    Button userset, bgset;
+    Button bgset;
     TextView tv_email;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = database.getReference();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_setting, container, false);
-        userset = v.findViewById(R.id.btn_userset);
         bgset = v.findViewById(R.id.btn_imgset);
         tv_email = v.findViewById(R.id.tv_email);
 
@@ -34,13 +37,7 @@ public class Fragment_setting extends Fragment {
                 tv_email.setText(email);
             }
         }
-        userset.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UsersetActivity.class);
-                startActivity(intent);
-            }
-        });
+
         bgset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

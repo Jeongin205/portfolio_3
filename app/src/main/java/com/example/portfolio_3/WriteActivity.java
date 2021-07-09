@@ -23,23 +23,39 @@ import java.util.Date;
 
 public class WriteActivity extends AppCompatActivity {
     Button back, send;
-    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/M/d");
-    private SimpleDateFormat mformat = new SimpleDateFormat("yyyyMd");
+    private SimpleDateFormat mFormat = new SimpleDateFormat("yyyy/MM/dd");
+    private SimpleDateFormat mformat = new SimpleDateFormat("yyyyMMdd");
+    private SimpleDateFormat month = new SimpleDateFormat("MM");
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference = database.getReference();
+    String month1="01";
+    String day1="000000";
+    int total_month=1;
+    int total=0;
     TextView textView;
     EditText diary;
     Date date = new Date();
     String time = mFormat.format(date);
     String a = mformat.format(date);
-
+    String month2 = month.format(date);
+    String day2 = mformat.format(date);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
-
         textView = findViewById(R.id.tv_date);
 
+        if(!month1.equals(month2)){
+            total_month=1;
+            month1=month2;
+        }
+        else {
+            total_month+=1;
+        }
+        if(!day1.equals(day2)){
+            total+=1;
+            day1=day2;
+        }
 
         textView.setText(time);
         back = findViewById(R.id.btn_wback);
@@ -50,6 +66,7 @@ public class WriteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 adddaylist(diary.getText().toString(), time);
+                Toast.makeText(WriteActivity.this, "입력성공!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(WriteActivity.this, MainActivity2.class);
                 startActivity(intent);
 
@@ -70,4 +87,5 @@ public class WriteActivity extends AppCompatActivity {
         String Uid = user.getUid();
         databaseReference.child(Uid).child(a).setValue(dayList);
     }
+
 }

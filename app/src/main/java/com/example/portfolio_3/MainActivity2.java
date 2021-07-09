@@ -17,31 +17,62 @@ public class MainActivity2 extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     RelativeLayout relativeLayout;
+    String a=null;
+    Intent mintent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         relativeLayout = findViewById(R.id.mback);
         bottomNavigationView = findViewById(R.id.bottomNavi);
-        Intent mintent = getIntent();
+        mintent= getIntent();
         String num = mintent.getStringExtra("number");
+
+
         if(num!=null){
             if (num.equals("1")){
                 relativeLayout.setBackgroundResource(bg1);
+
             }
-            else if (num.equals("2")){
+            if (num.equals("2")){
+                relativeLayout.setBackgroundResource(R.drawable.bg2);
+
+            }
+            if (num.equals("3")){
+                relativeLayout.setBackgroundResource(R.drawable.bg3);
+
+            }
+            if (num.equals("4")){
+                relativeLayout.setBackgroundResource(R.drawable.bg4);
+
+            }
+            if (num.equals("5")){
+                relativeLayout.setBackgroundResource(R.drawable.bg5);
+
+            }
+            if (num.equals("6")){
+                relativeLayout.setBackgroundResource(R.drawable.bg6);
+
+            }
+        }
+        else if(a != null) {
+            if (a.equals("1")){
+                relativeLayout.setBackgroundResource(bg1);
+            }
+            else if (a.equals("2")){
                 relativeLayout.setBackgroundResource(R.drawable.bg2);
             }
-            else if (num.equals("3")){
+            else if (a.equals("3")){
                 relativeLayout.setBackgroundResource(R.drawable.bg3);
             }
-            else if (num.equals("4")){
+            else if (a.equals("4")){
                 relativeLayout.setBackgroundResource(R.drawable.bg4);
             }
-            else if (num.equals("5")){
+            else if (a.equals("5")){
                 relativeLayout.setBackgroundResource(R.drawable.bg5);
             }
-            else if (num.equals("6")){
+            else if (a.equals("6")){
                 relativeLayout.setBackgroundResource(R.drawable.bg6);
             }
         }

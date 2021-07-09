@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Portfolio_3">
         <activity android:name=".ImgsetActivity"></activity>
-        <activity android:name=".UsersetActivity" />
         <activity android:name=".WriteActivity" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".JoinActivity" />

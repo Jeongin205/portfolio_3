@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="일기"
-        android:textSize="27dp"
+        android:textSize="23dp"
         android:layout_marginLeft="20dp"
         android:textColor="@color/black"
         android:fontFamily="@font/font"/>
@@ -24,7 +24,7 @@
         android:id="@+id/tv_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:text="날짜"

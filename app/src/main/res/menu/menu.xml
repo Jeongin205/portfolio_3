@@ -4,22 +4,24 @@
     <item
         android:title="Home"
         android:enabled="true"
-        app:showAsAction="ifRoom"
+
+        app:showAsAction="always"
         android:id="@+id/menu_home"
         android:icon="@drawable/ic_home"
         />
     <item
         android:title="Memo"
         android:enabled="true"
-        app:showAsAction="ifRoom"
+        android:checked="true"
         android:id="@+id/menu_memo"
+        app:showAsAction="always"
         android:icon="@drawable/ic_memo"
         />
     <item
         android:title="Setting"
         android:enabled="true"
-        app:showAsAction="ifRoom"
         android:id="@+id/menu_setting"
+        app:showAsAction="always"
         android:icon="@drawable/ic_setting"
         />
 </menu>
